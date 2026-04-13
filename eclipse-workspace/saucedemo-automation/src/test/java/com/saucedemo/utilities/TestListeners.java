@@ -15,81 +15,136 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.saucedemo.testBase.BaseClass;
 
 public class TestListeners implements ITestListener {
 
-    // logger for listener events
     private static final Logger logger = LogManager.getLogger(TestListeners.class);
 
+    // shared ExtentReports instance (singleton from ExtentReportManager)
+    private ExtentReports extent = ExtentReportManager.getReportInstance();
+
+    // one ExtentTest node per test method
+    // ThreadLocal makes this safe if tests ever run in parallel
+    private ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+
     // ===================================================
-    // called automatically by TestNG when a test STARTS
+    // called when a test STARTS - create the report node
     // ===================================================
     @Override
     public void onTestStart(ITestResult result) {
         logger.info("TEST STARTED: " + result.getName());
+
+        // create a test entry in the HTML report
+        ExtentTest test = extent.createTest(result.getName());
+        extentTest.set(test);
     }
 
     // ===================================================
-    // called automatically by TestNG when a test PASSES
+    // called when a test PASSES
+    // ExtentReports 5.x - addScreenCaptureFromPath does NOT
+    // throw IOException so no try-catch needed around it
     // ===================================================
     @Override
     public void onTestSuccess(ITestResult result) {
         logger.info("TEST PASSED: " + result.getName());
+
+        extentTest.get().log(Status.PASS, "Test Passed");
+
+        String screenshotPath = takeScreenshot(result);
+        if (screenshotPath != null) {
+            extentTest.get().addScreenCaptureFromPath(
+                screenshotPath,
+                result.getName() + " - PASSED"
+            );
+        }
     }
 
     // ===================================================
-    // called automatically by TestNG when a test FAILS
-    // takes screenshot and saves to screenshots/ folder
+    // called when a test FAILS
     // ===================================================
     @Override
     public void onTestFailure(ITestResult result) {
         logger.error("TEST FAILED: " + result.getName());
 
-        // Step 1: get the test class instance (which extends BaseClass)
-        Object testInstance = result.getInstance();
-        WebDriver driver = ((BaseClass) testInstance).driver;
+        extentTest.get().log(
+            Status.FAIL,
+            "Test Failed: " + result.getThrowable()
+        );
 
-        // Step 2: take screenshot only if driver is alive
-        if (driver != null) {
-            try {
-                // Step 3: capture screenshot as a file
-                File src = ((TakesScreenshot) driver)
-                    .getScreenshotAs(OutputType.FILE);
-
-                // Step 4: create unique filename with timestamp
-                String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss")
-                    .format(new Date());
-                String fileName = result.getName() + "_" + timestamp + ".png";
-
-                // Step 5: save to screenshots/ folder at project root
-                String destPath = System.getProperty("user.dir") 
-                    + "/screenshots/" + fileName;
-                File dest = new File(destPath);
-
-                // Step 6: copy the file to screenshots folder
-                FileUtils.copyFile(src, dest);
-                logger.info("Screenshot saved: " + destPath);
-
-            } catch (IOException e) {
-                logger.error("Screenshot failed: " + e.getMessage());
-            }
+        String screenshotPath = takeScreenshot(result);
+        if (screenshotPath != null) {
+            extentTest.get().addScreenCaptureFromPath(
+                screenshotPath,
+                result.getName() + " - FAILED"
+            );
         }
     }
 
     // ===================================================
-    // called automatically by TestNG when a test is SKIPPED
+    // called when a test is SKIPPED
     // ===================================================
     @Override
     public void onTestSkipped(ITestResult result) {
         logger.warn("TEST SKIPPED: " + result.getName());
+        extentTest.get().log(Status.SKIP, "Test Skipped");
     }
 
-    // these two are required by ITestListener interface
-    // we don't need them so left empty
+    // ===================================================
+    // called when suite FINISHES
+    // extent.flush() writes the HTML file to disk
+    // without this the reports/ folder stays empty
+    // ===================================================
     @Override
-    public void onFinish(ITestContext context) {}
+    public void onFinish(ITestContext context) {
+        extent.flush();
+        logger.info("Extent report written to /reports/TestReport.html");
+    }
 
     @Override
     public void onStart(ITestContext context) {}
+
+    // ===================================================
+    // takeScreenshot - helper used by onTestSuccess & onTestFailure
+    // IOException from FileUtils.copyFile IS a real checked
+    // exception so we keep try-catch only inside this method
+    // ===================================================
+    private String takeScreenshot(ITestResult result) {
+
+        Object testInstance = result.getInstance();
+        WebDriver driver = ((BaseClass) testInstance).driver;
+
+        if (driver == null) {
+            logger.warn("Driver is null - cannot take screenshot for: " + result.getName());
+            return null;
+        }
+
+        try {
+            File src = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.FILE);
+
+            String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss")
+                .format(new Date());
+            String fileName = result.getName() + "_" + timestamp + ".png";
+
+            String destPath = System.getProperty("user.dir")
+                + "/screenshots/" + fileName;
+            File dest = new File(destPath);
+
+            // create folder if it doesn't exist
+            dest.getParentFile().mkdirs();
+
+            FileUtils.copyFile(src, dest);
+            logger.info("Screenshot saved: " + destPath);
+
+            return dest.getAbsolutePath();
+
+        } catch (IOException e) {
+            logger.error("Screenshot failed for " + result.getName() + ": " + e.getMessage());
+            return null;
+        }
+    }
 }

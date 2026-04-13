@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-13T05:34:37 IST" name="Saucedemo Test Suite" finished-at="2026-04-13T05:35:36 IST" duration-ms="58665">
+  <suite started-at="2026-04-13T05:58:17 IST" name="Saucedemo Test Suite" finished-at="2026-04-13T05:59:17 IST" duration-ms="60594">
     <groups>
     </groups>
-    <test started-at="2026-04-13T05:34:37 IST" name="Saucedemo Tests" finished-at="2026-04-13T05:35:36 IST" duration-ms="58665">
+    <test started-at="2026-04-13T05:58:17 IST" name="Saucedemo Tests" finished-at="2026-04-13T05:59:17 IST" duration-ms="60594">
       <class name="com.saucedemo.testCases.TC_005_DataDrivenLoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@44e3a2b2]" started-at="2026-04-13T05:35:32 IST" name="setup" finished-at="2026-04-13T05:35:34 IST" duration-ms="1471" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@7bf9b098]" started-at="2026-04-13T05:59:13 IST" name="setup" finished-at="2026-04-13T05:59:15 IST" duration-ms="2128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_LoginWithMultipleUsers(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@44e3a2b2]" started-at="2026-04-13T05:35:35 IST" name="verify_LoginWithMultipleUsers" data-provider="getLoginData" finished-at="2026-04-13T05:35:35 IST" duration-ms="416" status="PASS">
+        <test-method signature="verify_LoginWithMultipleUsers(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@7bf9b098]" started-at="2026-04-13T05:59:16 IST" name="verify_LoginWithMultipleUsers" data-provider="getLoginData" finished-at="2026-04-13T05:59:16 IST" duration-ms="465" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_LoginWithMultipleUsers -->
-        <test-method signature="verify_LoginWithMultipleUsers(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@44e3a2b2]" started-at="2026-04-13T05:35:35 IST" name="verify_LoginWithMultipleUsers" data-provider="getLoginData" finished-at="2026-04-13T05:35:35 IST" duration-ms="301" status="PASS">
+        <test-method signature="verify_LoginWithMultipleUsers(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@7bf9b098]" started-at="2026-04-13T05:59:16 IST" name="verify_LoginWithMultipleUsers" data-provider="getLoginData" finished-at="2026-04-13T05:59:17 IST" duration-ms="294" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_LoginWithMultipleUsers -->
-        <test-method signature="verify_LoginWithMultipleUsers(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@44e3a2b2]" started-at="2026-04-13T05:35:35 IST" name="verify_LoginWithMultipleUsers" data-provider="getLoginData" finished-at="2026-04-13T05:35:36 IST" duration-ms="254" status="PASS">
+        <test-method signature="verify_LoginWithMultipleUsers(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@7bf9b098]" started-at="2026-04-13T05:59:17 IST" name="verify_LoginWithMultipleUsers" data-provider="getLoginData" finished-at="2026-04-13T05:59:17 IST" duration-ms="254" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,71 +74,110 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_LoginWithMultipleUsers -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@44e3a2b2]" started-at="2026-04-13T05:35:36 IST" name="tearDown" finished-at="2026-04-13T05:35:36 IST" duration-ms="174" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_005_DataDrivenLoginTest@7bf9b098]" started-at="2026-04-13T05:59:17 IST" name="tearDown" finished-at="2026-04-13T05:59:17 IST" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.testCases.TC_005_DataDrivenLoginTest -->
       <class name="com.saucedemo.testCases.TC_002_AddToCartTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_002_AddToCartTest@753432a2]" started-at="2026-04-13T05:34:41 IST" name="setup" finished-at="2026-04-13T05:34:43 IST" duration-ms="1893" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_002_AddToCartTest@6fa590ba]" started-at="2026-04-13T05:58:21 IST" name="setup" finished-at="2026-04-13T05:58:23 IST" duration-ms="2000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_AddProductsToCart()[pri:1, instance:com.saucedemo.testCases.TC_002_AddToCartTest@753432a2]" started-at="2026-04-13T05:34:43 IST" name="verify_AddProductsToCart" finished-at="2026-04-13T05:34:52 IST" duration-ms="8670" status="PASS">
+        <test-method signature="verify_AddProductsToCart()[pri:1, instance:com.saucedemo.testCases.TC_002_AddToCartTest@6fa590ba]" started-at="2026-04-13T05:58:23 IST" name="verify_AddProductsToCart" finished-at="2026-04-13T05:58:32 IST" duration-ms="8690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_AddProductsToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_002_AddToCartTest@753432a2]" started-at="2026-04-13T05:34:52 IST" name="tearDown" finished-at="2026-04-13T05:34:52 IST" duration-ms="216" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_002_AddToCartTest@6fa590ba]" started-at="2026-04-13T05:58:32 IST" name="tearDown" finished-at="2026-04-13T05:58:32 IST" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.testCases.TC_002_AddToCartTest -->
       <class name="com.saucedemo.testCases.TC_004_EndToEndTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_004_EndToEndTest@4983159f]" started-at="2026-04-13T05:35:11 IST" name="setup" finished-at="2026-04-13T05:35:14 IST" duration-ms="2127" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_004_EndToEndTest@72e34f77]" started-at="2026-04-13T05:58:52 IST" name="setup" finished-at="2026-04-13T05:58:54 IST" duration-ms="2166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_CompletePurchaseFlow()[pri:0, instance:com.saucedemo.testCases.TC_004_EndToEndTest@4983159f]" started-at="2026-04-13T05:35:14 IST" name="verify_CompletePurchaseFlow" finished-at="2026-04-13T05:35:32 IST" duration-ms="18487" status="PASS">
+        <test-method signature="verify_CompletePurchaseFlow()[pri:0, instance:com.saucedemo.testCases.TC_004_EndToEndTest@72e34f77]" started-at="2026-04-13T05:58:54 IST" name="verify_CompletePurchaseFlow" finished-at="2026-04-13T05:59:12 IST" duration-ms="18498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_CompletePurchaseFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_004_EndToEndTest@4983159f]" started-at="2026-04-13T05:35:32 IST" name="tearDown" finished-at="2026-04-13T05:35:32 IST" duration-ms="211" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_004_EndToEndTest@72e34f77]" started-at="2026-04-13T05:59:12 IST" name="tearDown" finished-at="2026-04-13T05:59:13 IST" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.testCases.TC_004_EndToEndTest -->
       <class name="com.saucedemo.testCases.TC_003_CheckoutTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_003_CheckoutTest@23bff419]" started-at="2026-04-13T05:34:52 IST" name="setup" finished-at="2026-04-13T05:34:54 IST" duration-ms="1868" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_003_CheckoutTest@6e9319f]" started-at="2026-04-13T05:58:32 IST" name="setup" finished-at="2026-04-13T05:58:34 IST" duration-ms="1883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_CheckoutFlow()[pri:0, instance:com.saucedemo.testCases.TC_003_CheckoutTest@23bff419]" started-at="2026-04-13T05:34:54 IST" name="verify_CheckoutFlow" finished-at="2026-04-13T05:35:11 IST" duration-ms="17505" status="PASS">
+        <test-method signature="verify_CheckoutFlow()[pri:0, instance:com.saucedemo.testCases.TC_003_CheckoutTest@6e9319f]" started-at="2026-04-13T05:58:34 IST" name="verify_CheckoutFlow" finished-at="2026-04-13T05:58:51 IST" duration-ms="17542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_CheckoutFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_003_CheckoutTest@23bff419]" started-at="2026-04-13T05:35:11 IST" name="tearDown" finished-at="2026-04-13T05:35:11 IST" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_003_CheckoutTest@6e9319f]" started-at="2026-04-13T05:58:51 IST" name="tearDown" finished-at="2026-04-13T05:58:52 IST" duration-ms="233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.testCases.TC_003_CheckoutTest -->
       <class name="com.saucedemo.testCases.TC_001_LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_001_LoginTest@56303b57]" started-at="2026-04-13T05:34:37 IST" name="setup" finished-at="2026-04-13T05:34:40 IST" duration-ms="2659" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.testCases.TC_001_LoginTest@54361a9]" started-at="2026-04-13T05:58:17 IST" name="setup" finished-at="2026-04-13T05:58:19 IST" duration-ms="2629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_ValidLogin()[pri:1, instance:com.saucedemo.testCases.TC_001_LoginTest@56303b57]" started-at="2026-04-13T05:34:40 IST" name="verify_ValidLogin" finished-at="2026-04-13T05:34:40 IST" duration-ms="453" status="PASS">
+        <test-method signature="verify_ValidLogin()[pri:1, instance:com.saucedemo.testCases.TC_001_LoginTest@54361a9]" started-at="2026-04-13T05:58:19 IST" name="verify_ValidLogin" finished-at="2026-04-13T05:58:20 IST" duration-ms="363" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Valid login failed - not on inventory page expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Valid login failed - not on inventory page expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.saucedemo.testCases.TC_001_LoginTest.verify_ValidLogin(TC_001_LoginTest.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_ValidLogin -->
-        <test-method signature="verify_InvalidLogin()[pri:2, instance:com.saucedemo.testCases.TC_001_LoginTest@56303b57]" started-at="2026-04-13T05:34:40 IST" name="verify_InvalidLogin" finished-at="2026-04-13T05:34:41 IST" duration-ms="302" status="PASS">
+        <test-method signature="verify_InvalidLogin()[pri:2, instance:com.saucedemo.testCases.TC_001_LoginTest@54361a9]" started-at="2026-04-13T05:58:20 IST" name="verify_InvalidLogin" finished-at="2026-04-13T05:58:20 IST" duration-ms="327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_InvalidLogin -->
-        <test-method signature="verify_EmptyFieldsLogin()[pri:3, instance:com.saucedemo.testCases.TC_001_LoginTest@56303b57]" started-at="2026-04-13T05:34:41 IST" name="verify_EmptyFieldsLogin" finished-at="2026-04-13T05:34:41 IST" duration-ms="95" status="PASS">
+        <test-method signature="verify_EmptyFieldsLogin()[pri:3, instance:com.saucedemo.testCases.TC_001_LoginTest@54361a9]" started-at="2026-04-13T05:58:20 IST" name="verify_EmptyFieldsLogin" finished-at="2026-04-13T05:58:21 IST" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_EmptyFieldsLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_001_LoginTest@56303b57]" started-at="2026-04-13T05:34:41 IST" name="tearDown" finished-at="2026-04-13T05:34:41 IST" duration-ms="174" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.testCases.TC_001_LoginTest@54361a9]" started-at="2026-04-13T05:58:21 IST" name="tearDown" finished-at="2026-04-13T05:58:21 IST" duration-ms="189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

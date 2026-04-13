@@ -209,3 +209,76 @@
 2026-04-13 05:35:36 [main] INFO  BaseClass - Invalid login correctly blocked: wrong_user
 2026-04-13 05:35:36 [main] INFO  TestListeners - TEST PASSED: verify_LoginWithMultipleUsers
 2026-04-13 05:35:36 [main] INFO  BaseClass - Browser closed
+2026-04-13 05:58:17 [main] INFO  BaseClass - Config file loaded successfully
+2026-04-13 05:58:18 [main] INFO  BaseClass - Chrome browser launched
+2026-04-13 05:58:19 [main] INFO  BaseClass - Navigated to: https://www.saucedemo.com/
+2026-04-13 05:58:19 [main] INFO  TestListeners - TEST STARTED: verify_ValidLogin
+2026-04-13 05:58:19 [main] INFO  BaseClass - Starting valid login test
+2026-04-13 05:58:20 [main] ERROR TestListeners - TEST FAILED: verify_ValidLogin
+2026-04-13 05:58:20 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_ValidLogin_2026-04-13_05-58-20.png
+2026-04-13 05:58:20 [main] INFO  TestListeners - TEST STARTED: verify_InvalidLogin
+2026-04-13 05:58:20 [main] INFO  BaseClass - Starting invalid login test
+2026-04-13 05:58:20 [main] INFO  BaseClass - Invalid login test passed - error: Epic sadface: Sorry, this user has been locked out.
+2026-04-13 05:58:20 [main] INFO  TestListeners - TEST PASSED: verify_InvalidLogin
+2026-04-13 05:58:20 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_InvalidLogin_2026-04-13_05-58-20.png
+2026-04-13 05:58:20 [main] INFO  TestListeners - TEST STARTED: verify_EmptyFieldsLogin
+2026-04-13 05:58:20 [main] INFO  BaseClass - Starting empty fields login test
+2026-04-13 05:58:21 [main] INFO  BaseClass - Empty fields test passed - error shown: Epic sadface: Username is required
+2026-04-13 05:58:21 [main] INFO  TestListeners - TEST PASSED: verify_EmptyFieldsLogin
+2026-04-13 05:58:21 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_EmptyFieldsLogin_2026-04-13_05-58-21.png
+2026-04-13 05:58:21 [main] INFO  BaseClass - Browser closed
+2026-04-13 05:58:21 [main] INFO  BaseClass - Config file loaded successfully
+2026-04-13 05:58:22 [main] INFO  BaseClass - Chrome browser launched
+2026-04-13 05:58:23 [main] INFO  BaseClass - Navigated to: https://www.saucedemo.com/
+2026-04-13 05:58:23 [main] INFO  TestListeners - TEST STARTED: verify_AddProductsToCart
+2026-04-13 05:58:23 [main] INFO  BaseClass - Starting add to cart test
+2026-04-13 05:58:32 [main] INFO  BaseClass - Cart badge shows: 2
+2026-04-13 05:58:32 [main] INFO  TestListeners - TEST PASSED: verify_AddProductsToCart
+2026-04-13 05:58:32 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_AddProductsToCart_2026-04-13_05-58-32.png
+2026-04-13 05:58:32 [main] INFO  BaseClass - Browser closed
+2026-04-13 05:58:32 [main] INFO  BaseClass - Config file loaded successfully
+2026-04-13 05:58:33 [main] INFO  BaseClass - Chrome browser launched
+2026-04-13 05:58:34 [main] INFO  BaseClass - Navigated to: https://www.saucedemo.com/
+2026-04-13 05:58:34 [main] INFO  TestListeners - TEST STARTED: verify_CheckoutFlow
+2026-04-13 05:58:34 [main] INFO  BaseClass - Starting checkout flow test
+2026-04-13 05:58:51 [main] INFO  BaseClass - Order confirmed: Thank you for your order!
+2026-04-13 05:58:51 [main] INFO  TestListeners - TEST PASSED: verify_CheckoutFlow
+2026-04-13 05:58:51 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_CheckoutFlow_2026-04-13_05-58-51.png
+2026-04-13 05:58:52 [main] INFO  BaseClass - Browser closed
+2026-04-13 05:58:52 [main] INFO  BaseClass - Config file loaded successfully
+2026-04-13 05:58:53 [main] INFO  BaseClass - Chrome browser launched
+2026-04-13 05:58:54 [main] INFO  BaseClass - Navigated to: https://www.saucedemo.com/
+2026-04-13 05:58:54 [main] INFO  TestListeners - TEST STARTED: verify_CompletePurchaseFlow
+2026-04-13 05:58:54 [main] INFO  BaseClass - === Starting End to End Test ===
+2026-04-13 05:58:54 [main] INFO  BaseClass - Step 1: Logging in
+2026-04-13 05:58:56 [main] INFO  BaseClass - Step 2: Adding Backpack to cart
+2026-04-13 05:58:57 [main] INFO  BaseClass - Step 3: Adding Bike Light to cart
+2026-04-13 05:58:58 [main] INFO  BaseClass - Step 4: Going to cart
+2026-04-13 05:59:00 [main] INFO  BaseClass - Step 5: Clicking checkout
+2026-04-13 05:59:04 [main] INFO  BaseClass - Step 6: Filling checkout info
+2026-04-13 05:59:09 [main] INFO  BaseClass - Step 7: Clicking finish
+2026-04-13 05:59:12 [main] INFO  BaseClass - Step 8: Verifying order confirmation
+2026-04-13 05:59:12 [main] INFO  BaseClass - === End to End Test PASSED ===
+2026-04-13 05:59:12 [main] INFO  TestListeners - TEST PASSED: verify_CompletePurchaseFlow
+2026-04-13 05:59:12 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_CompletePurchaseFlow_2026-04-13_05-59-12.png
+2026-04-13 05:59:13 [main] INFO  BaseClass - Browser closed
+2026-04-13 05:59:13 [main] INFO  BaseClass - Config file loaded successfully
+2026-04-13 05:59:14 [main] INFO  BaseClass - Chrome browser launched
+2026-04-13 05:59:15 [main] INFO  BaseClass - Navigated to: https://www.saucedemo.com/
+2026-04-13 05:59:16 [main] INFO  TestListeners - TEST STARTED: verify_LoginWithMultipleUsers
+2026-04-13 05:59:16 [main] INFO  BaseClass - Testing login with user: standard_user
+2026-04-13 05:59:16 [main] INFO  BaseClass - Valid login passed for: standard_user
+2026-04-13 05:59:16 [main] INFO  TestListeners - TEST PASSED: verify_LoginWithMultipleUsers
+2026-04-13 05:59:16 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_LoginWithMultipleUsers_2026-04-13_05-59-16.png
+2026-04-13 05:59:16 [main] INFO  TestListeners - TEST STARTED: verify_LoginWithMultipleUsers
+2026-04-13 05:59:16 [main] INFO  BaseClass - Testing login with user: locked_out_user
+2026-04-13 05:59:17 [main] INFO  BaseClass - Invalid login correctly blocked: locked_out_user
+2026-04-13 05:59:17 [main] INFO  TestListeners - TEST PASSED: verify_LoginWithMultipleUsers
+2026-04-13 05:59:17 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_LoginWithMultipleUsers_2026-04-13_05-59-17.png
+2026-04-13 05:59:17 [main] INFO  TestListeners - TEST STARTED: verify_LoginWithMultipleUsers
+2026-04-13 05:59:17 [main] INFO  BaseClass - Testing login with user: wrong_user
+2026-04-13 05:59:17 [main] INFO  BaseClass - Invalid login correctly blocked: wrong_user
+2026-04-13 05:59:17 [main] INFO  TestListeners - TEST PASSED: verify_LoginWithMultipleUsers
+2026-04-13 05:59:17 [main] INFO  TestListeners - Screenshot saved: C:\Users\henp\eclipse-workspace\saucedemo-automation/screenshots/verify_LoginWithMultipleUsers_2026-04-13_05-59-17.png
+2026-04-13 05:59:17 [main] INFO  BaseClass - Browser closed
+2026-04-13 05:59:18 [main] INFO  TestListeners - Extent report written to /reports/TestReport.html
