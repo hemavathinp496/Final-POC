@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Appenders>
+
+        <!-- ===== CONSOLE - prints logs in Eclipse console ===== -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{1} - %msg%n"/>
+        </Console>
+
+        <!-- ===== FILE - saves logs to logs/automation.log ===== -->
+        <File name="FileAppender" fileName="logs/automation.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{1} - %msg%n"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <!-- Root logger - catches all log messages -->
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

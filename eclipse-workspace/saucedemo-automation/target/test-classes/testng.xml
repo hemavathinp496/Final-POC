@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Saucedemo Test Suite" verbose="1">
+
+    <!-- register TestListeners so screenshots are taken on failure -->
+    <listeners>
+        <listener class-name="com.saucedemo.utilities.TestListeners"/>
+    </listeners>
+
+    <!-- run tests one by one, not in parallel -->
+    <test name="Saucedemo Tests">
+        <classes>
+            <class name="com.saucedemo.testCases.TC_001_LoginTest"/>
+            <class name="com.saucedemo.testCases.TC_002_AddToCartTest"/>
+            <class name="com.saucedemo.testCases.TC_003_CheckoutTest"/>
+            <class name="com.saucedemo.testCases.TC_004_EndToEndTest"/>
+            <class name="com.saucedemo.testCases.TC_005_DataDrivenLoginTest"/>
+        </classes>
+    </test>
+
+</suite>
