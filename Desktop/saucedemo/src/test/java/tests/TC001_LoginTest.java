@@ -1,8 +1,11 @@
 package tests;
 
 import org.testng.Assert;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
 
 import pages.LoginPage;
 import utils.CSVReader;
@@ -36,10 +39,18 @@ public class TC001_LoginTest extends BaseTest {
                 "Expected error not shown for: " + username
             );
 
-            
-            TestListener.takeScreenshot("login_blocked_" + username, driver);
+            String path = TestListener.takeNegativeScreenshot("login_blocked_" + username, driver);
+            if (path != null) {
+                try {
+                    TestListener.extentTest.log(Status.INFO, "Negative scenario - user correctly blocked: " + username);
+                    TestListener.extentTest.addScreenCaptureFromPath(path, "Negative Screenshot");
+                } catch (Exception e) {
+                    System.out.println("Could not attach screenshot: " + e.getMessage());
+                }
+            }
         }
     }
+
     @DataProvider(name = "loginData")
     public Object[][] loginData() throws Exception {
         return CSVReader.readCSV(

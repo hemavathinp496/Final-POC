@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,11 +19,11 @@ public class CheckoutPage extends BasePage {
     @FindBy(xpath = "//*[@id='continue']")
     WebElement btnContinue;
 
-    // finish button on review page
+    
     @FindBy(xpath = "//*[@id='finish']")
     WebElement btnFinish;
 
-    // thank you message after order placed
+  
     @FindBy(xpath = "//*[@id='checkout_complete_container']/h2")
     WebElement lblThankYou;
 

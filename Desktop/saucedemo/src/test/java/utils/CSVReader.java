@@ -1,6 +1,8 @@
 package utils;
 
 import java.io.BufferedReader;
+
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,7 +32,7 @@ public class CSVReader {
 
         br.close();
 
-        // convert list to 2D Object array for TestNG DataProvider
+    
         Object[][] data = new Object[rows.size()][];
         for (int i = 0; i < rows.size(); i++) {
             data[i] = rows.get(i);

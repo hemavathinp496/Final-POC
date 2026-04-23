@@ -2,16 +2,16 @@
 
 <suite name="Saucedemo Test Suite" verbose="1">
 
-    <listeners>
-        <listener class-name="utils.TestListener"/>
-    </listeners>
+	<listeners>
+		<listener class-name="utils.TestListener" />
+	</listeners>
 
-    <test name="Saucedemo Tests">
-        <classes>
-            <class name="tests.TC001_LoginTest"/>
-            <class name="tests.TC002_AddToCartTest"/>
-            <class name="tests.TC003_CheckoutTest"/>
-        </classes>
-    </test>
+	<test name="Saucedemo Tests">
+		<classes>
+			<class name="tests.TC001_LoginTest" />
+			<class name="tests.TC002_AddToCartTest" />
+			<class name="tests.TC003_CheckoutTest" />
+		</classes>
+	</test>
 
 </suite>

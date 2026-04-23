@@ -1,6 +1,8 @@
 package utils;
 
 import java.io.File;
+
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,11 +18,9 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import tests.BaseTest;
-
 public class TestListener implements ITestListener {
 
-    ExtentTest extentTest;
+    public static ExtentTest extentTest;
 
     @Override
     public void onStart(ITestContext context) {
@@ -40,12 +40,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         extentTest.log(Status.FAIL, "Test Failed: " + result.getThrowable());
-
-        WebDriver driver = ((BaseTest) result.getInstance()).driver;
-        String path = takeScreenshot(result.getName(), driver);
-        if (path != null) {
-            extentTest.addScreenCaptureFromPath(path, "Failure Screenshot");
-        }
     }
 
     @Override
@@ -58,7 +52,7 @@ public class TestListener implements ITestListener {
         ExtentManager.getInstance().flush();
     }
 
-    public static String takeScreenshot(String label, WebDriver driver) {
+    public static String takeNegativeScreenshot(String label, WebDriver driver) {
         try {
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
