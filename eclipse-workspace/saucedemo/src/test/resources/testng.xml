@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="SaucedemoSuite" verbose="1">
+
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <test name="LoginTest">
+        <classes>
+            <class name="tests.TC1_LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="AddToCartTest">
+        <classes>
+            <class name="tests.TC2_AddToCartTest"/>
+        </classes>
+    </test>
+
+    <test name="CheckoutTest">
+        <classes>
+            <class name="tests.TC3_CheckoutTest"/>
+        </classes>
+    </test>
+
+    <test name="MultipleTabsTest">
+        <classes>
+            <class name="tests.TC4_MultipleTabsTest"/>
+        </classes>
+    </test>
+
+</suite>

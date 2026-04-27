@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<!--
+    PLACE THIS FILE IN: src/test/resources/log4j2.xml
+    Log4j2 auto-discovers it from the classpath — no code needed to load it.
+
+    status="WARN" — controls Log4j's own internal logging.
+    Only Log4j framework warnings/errors print, not its internal debug noise.
+
+    Two appenders:
+      1. ConsoleAppender — real-time output in your terminal during test runs
+      2. FileAppender    — permanent log saved to logs/saucedemo.log
+
+    Pattern breakdown:
+      %d{yyyy-MM-dd HH:mm:ss}  timestamp
+      [%-5level]               log level padded to 5 chars: INFO , WARN , ERROR
+      [%t]                     thread name (important when parallel is enabled later)
+      %c{1}                    short class name e.g. BaseTest (not full package path)
+      %msg                     the actual log message
+      %n                       newline
+-->
+
+    <Appenders>
+
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%t] %c{1} - %msg%n"/>
+        </Console>
+
+        <RollingFile name="FileAppender"
+                     fileName="logs/saucedemo.log"
+                     filePattern="logs/saucedemo-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%t] %c{1} - %msg%n"/>
+            <Policies>
+                <!-- Roll over at midnight every day -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <!-- Also roll over if file exceeds 10MB -->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!-- Keep last 7 rolled files only -->
+            <DefaultRolloverStrategy max="7"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+        <!--
+            Root logger catches all loggers in the project.
+            level="INFO" — INFO, WARN, ERROR are logged; DEBUG is not.
+            Change to level="DEBUG" when troubleshooting to see verbose output.
+        -->
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
